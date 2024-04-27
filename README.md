@@ -1,5 +1,5 @@
 # Doom Zombies
-![Conceptual art](https://github.com/LuisMelladoDiaz/DoomZ/blob/main/images/DoomZ.jpg)
+<img src="https://github.com/LuisMelladoDiaz/DoomZ/blob/main/images/DoomZ.jpg" alt="Conceptual art" width="400">
 
 # Project State
 
@@ -10,7 +10,14 @@ The game engine was developed following the [tutorial](https://www.youtube.com/w
 
 3DSage developed this engine in C so it was my work to port it to python. I do not know C so the port was developed by understanding and translating the ideas and following my intuition. That means that even though I tried to refactor and optimize the code for python there is still room for improvement. If you find any mistakes or you think the code can be rewritten to run more efficiently, do not doubt in contacting me or sending a pull request if you feel like it.
 
-This is how the game engine looks at the moment:      
+This is how the game engine looks at the moment:   
 
-![Engine v0](https://github.com/LuisMelladoDiaz/DoomZ/blob/main/images/GameEngine_v0.png)
+     
+<img src="https://github.com/LuisMelladoDiaz/DoomZ/blob/main/images/GameEngine_v0.png" alt="Conceptual art" width="400">
+
+
+### Map editor (Coming soon...)
+<img src="https://github.com/LuisMelladoDiaz/DoomZ/assets/93400291/22e2313c-ff9d-4120-83fe-17a72f312e22" alt="Map Editor" width="400">
+
+
 
