@@ -1,2 +1,2 @@
-# DoomZ
-Classic 1993 Doom but it's a zombie survival game.
+# Doom Zombies
+What if we combine classic Doom from 1993 and Call of Duty Zombies?
