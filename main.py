@@ -7,10 +7,11 @@ from constants import *
 import sys
 from player.player import P
 from screen.display import *
-
 from player.movement import KeysDown, KeysUp
+from map.mapParser import read_map
 
-
+MAP = read_map(f'map/maps_data/map1')
+MAP_LENGTH = len(MAP)
 
 # Initialization function
 def init():
@@ -21,8 +22,11 @@ def init():
     P.horizontal_angle = 0
     P.vertical_angle = 0
 
+
 # Main function
 def main():
+    MAP = read_map(f'map/maps_data/map1')
+    map_editor_parser(MAP)
     glutInit(sys.argv)
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB)
     glutInitWindowPosition(int(WINDOW_WIDTH / 2), int(WINDOW_HEIGHT / 2))

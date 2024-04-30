@@ -19,17 +19,17 @@ K = Keys()
 def movePlayer():
 
     if K.a == 1 and K.m == 0:
-        P.horizontal_angle -= 0.05
+        P.horizontal_angle -= 0.15
         # if P.horizontal_angle < 0:
             # P.horizontal_angle += 360
 
     if K.d == 1 and K.m == 0:
-        P.horizontal_angle += 0.05
+        P.horizontal_angle += 0.15
         # if P.horizontal_angle > 359:
             # P.horizontal_angle -= 360
 
-    dx = math.sin(P.horizontal_angle)*10.0
-    dy = math.cos(P.horizontal_angle)*10.0
+    dx = math.sin(P.horizontal_angle)*15.0
+    dy = math.cos(P.horizontal_angle)*15.0
 
     if K.w == 1 and K.m == 0:
         P.x += dx

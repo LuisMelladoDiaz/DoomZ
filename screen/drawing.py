@@ -7,16 +7,14 @@ from maths.distances import distance_point_point
 from player.player import P
 from screen.clipping import clip, clip_behind_player
 from screen.elements import *
+from map.mapParser import *
+from main import MAP_LENGTH
 
 tick = 0
 
 # Function to draw a pixel
 def pixel(x, y, c):
-    rgb = [[255, 0, 0], [160, 160, 0], [0, 255, 0], [0, 160, 0],
-           [0, 255, 255], [0, 160, 160], [160, 100, 0], [110, 50, 0],
-           [0, 60, 130]]  # RGB values for colors
-
-    glColor3ub(*rgb[c])
+    glColor3ub(*c)
     glBegin(GL_POINTS)
     glVertex2i(int(x * PIXEL_SCALE + 2), int(y * PIXEL_SCALE + 2))
     glEnd()
@@ -25,15 +23,14 @@ def pixel(x, y, c):
 def clearBackground():
     for y in range(SCREEN_HEIGHT):
         for x in range(SCREEN_WIDTH):
-            pixel(x, y, 8)
+            pixel(x, y, [0, 60, 130])
 
 # Function to draw the 3D scene
 def draw3D():
 
     cos = math.cos(P.horizontal_angle)
     sin = math.sin(P.horizontal_angle)
-
-    for sector in range(NUM_SECTORS):
+    for sector in range(MAP_LENGTH):
         sectors[sector].distance = 0
 
         if(P.z < sectors[sector].floor): sectors[sector].surface = 1
